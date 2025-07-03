@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const API_URL = 'http://localhost:1337/api';
+const API_URL = 'https://truthful-caring-production.up.railway.app/api';
 
 const register = (username, email, password) => {
   return axios.post(`${API_URL}/auth/local/register`, {

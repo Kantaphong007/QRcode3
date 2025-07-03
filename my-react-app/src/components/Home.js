@@ -21,7 +21,7 @@ const Home = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('http://localhost:1337/api/events?populate=*');
+      const response = await axios.get('https://truthful-caring-production.up.railway.app/api/events?populate=*');
       setEvents(response.data.data);
       console.log('Fetched events:', response.data.data);
     } catch (error) {
