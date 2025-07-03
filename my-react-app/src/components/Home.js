@@ -8,8 +8,6 @@ import EditEventModal from './EditEventModal';
 const Home = () => {
   const [events, setEvents] = useState([]);
   const [currentUser, setCurrentUser] = useState(undefined);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null); // เก็บข้อมูล Event ที่กำลังจะแก้ไข
 
@@ -63,7 +61,6 @@ const Home = () => {
     // รีโหลดรายการ Events ใหม่หลังจากแก้ไขสำเร็จ
     const user = authService.getCurrentUser();
     if (user) {
-      const userId = user.id;
       try {
         fetchEvents()
       } catch (err) {

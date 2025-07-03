@@ -7,7 +7,6 @@ import authService from '../services/auth';
 const MyEvents = () => {
   const [myEvents, setMyEvents] = useState([]);
   const [currentUser, setCurrentUser] = useState(undefined);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const user = authService.getCurrentUser();
