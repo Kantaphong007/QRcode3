@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bills",
+  "info": {
+    "singularName": "bill",
+    "pluralName": "bills",
+    "displayName": "Bill"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "billId": {
+      "type": "uid",
+      "required": true
+    },
+    "payer": {
+      "type": "string",
+      "default": "Unknown",
+      "required": true
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true,
+      "max": 0
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}
