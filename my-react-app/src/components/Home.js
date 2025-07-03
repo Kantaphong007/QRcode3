@@ -87,7 +87,7 @@ const Home = () => {
       </div>
       <div className="row">
         {events.map(event => (
-          <div className="col-12 mb-3" key={event.documentId}>
+          <div className="col-12 mb-3" key={event?.documentId}>
             <div className="card">
               <div className="card-body">
                 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
@@ -102,7 +102,7 @@ const Home = () => {
                 <p className="card-text">Date: {new Date(event?.date).toLocaleString()}</p>
                 <p className="card-text">Cost: {event?.amountTotal} THB</p>
                 <p className="card-text">Players: {event?.attendees?.length || 0} / {event?.maxAttendees}</p>
-                {currentUser && !event.attendees.find(p => p.id === currentUser.user.id) && (
+                {currentUser && !event?.attendees?.find(p => p.id === currentUser.user.id) && (
                   <button onClick={() => handleJoinEvent(event?.documentId)} className="btn btn-success">Join</button>
                 )}
               </div>
